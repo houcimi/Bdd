@@ -1,0 +1,37 @@
+-- INSERTION DE DONNÉES POUR LA TABLE CAMPUSES --
+INSERT INTO Campuses (id, name, address, ville, region, codepostal)
+VALUES
+(1, 'Cergy', '123 Rue des Lilas', 'Cergy', 'Île-de-France', '95000'),
+(2, 'Pau', '456 Avenue des Pyrénées', 'Pau', 'Nouvelle-Aquitaine', '64000');
+
+-- INSERTION DE DONNÉES POUR LA TABLE USERS --
+INSERT INTO Users (id, name, email, password, campus_id)
+VALUES
+(1, 'Alice Dupont', 'alice.dupont@example.com', 'password123', 1),
+(2, 'Bob Martin', 'bob.martin@example.com', 'password456', 2),
+(3, 'Charlie Lee', 'charlie.lee@example.com', 'password789', 1),
+(4, 'David Kim', 'david.kim@example.com', 'passwordabc', 2);
+
+-- INSERTION DE DONNÉES POUR LA TABLE TICKETS --
+INSERT INTO Tickets (id, title, description, status, priority, user_id, campus_id)
+VALUES
+(1, 'Problème de connexion', 'Je ne peux pas me connecter à mon compte', 'Ouvert', 'Haute', 1, 1),
+(2, 'Problème d'imprimante', 'L'imprimante ne fonctionne pas', 'En cours', 'Moyenne', 2, 2),
+(3, 'Demande de logiciel', 'J'aimerais avoir accès au logiciel XYZ', 'Ouvert', 'Basse', 3, 1),
+(4, 'Problème de réseau', 'Je ne peux pas accéder à Internet', 'Fermé', 'Haute', 4, 2);
+
+-- INSERTION DE DONNÉES POUR LA TABLE SOFTWARE --
+INSERT INTO Software (id, name, version, licence_number, licence_expiry_date, campus_id)
+VALUES
+(1, 'Microsoft Office', '2019', 'ABC123', '2025-01-01', 1),
+(2, 'Adobe Photoshop', '2022', 'DEF456', '2023-12-31', 2),
+(3, 'Autodesk AutoCAD', '2021', 'GHI789', '2024-06-30', 1),
+(4, 'Google Chrome', '91', 'JKL012', '2022-09-30', 2);
+
+-- INSERTION DE DONNÉES POUR LA TABLE EQUIPMENT --
+INSERT INTO Equipment (id, name, serial_number, purchase_date, purchase_cost, warranty_expiry_date, campus_id)
+VALUES
+(1, 'Ordinateur portable', 'ABC123', '2020-01-01', 1000.00, '2022-01-01', 1),
+(2, 'Imprimante', 'DEF456', '2021-06-01', 200.00, '2023-06-01', 2),
+(3, 'Écran', 'GHI789', '2019-03-15', 300.00, '2022-03-15', 1),
+(4, 'Souris', 'JKL012', '2022-02-01', 50.00, '2024-02-01', 2);
